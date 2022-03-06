@@ -1,6 +1,6 @@
 tests_sources = []
 
-if host_machine.system() != 'windows'
+if host_machine.system() not in ['darwin', 'ios', 'windows']
   tests_sources += 'virtual-dir.c'
 endif
 
