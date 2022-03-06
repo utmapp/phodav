@@ -34,8 +34,8 @@ else
   deps += dependency('gio-unix-2.0', version : '>= 2.44')
 endif
 
-deps += dependency('libsoup-2.4', version : '>= 2.48.0')
-deps += dependency('libxml-2.0')
+deps += dependency('libsoup-2.4', version : '>= 2.48.0', static : true)
+deps += dependency('libxml-2.0', static : true)
 
 d1 = dependency('avahi-gobject', required : get_option('avahi'))
 d2 = dependency('avahi-client', required : get_option('avahi'))
